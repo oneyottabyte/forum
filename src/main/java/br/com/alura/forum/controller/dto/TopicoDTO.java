@@ -29,7 +29,7 @@ public class TopicoDTO {
 	public String getMensagem() {
 		return mensagem;
 	}
-	public LocalDateTime getDataCriação() {
+	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
 	}
 
