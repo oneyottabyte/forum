@@ -1,10 +1,10 @@
-package br.com.alura.forum.controller.dto;
+package br.com.alura.forum.controllers.dto;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import br.com.alura.forum.model.Topico;
+import br.com.alura.forum.models.Topico;
 
 public class TopicoDTO {
 	
