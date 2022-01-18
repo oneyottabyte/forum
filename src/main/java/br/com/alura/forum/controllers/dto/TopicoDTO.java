@@ -14,10 +14,10 @@ public class TopicoDTO {
 	private LocalDateTime dataCriacao;
 	
 	public TopicoDTO(Topico topico) {
-		id = topico.getId();
-		titulo = topico.getTitulo();
-		mensagem = topico.getMensagem();
-		dataCriacao = topico.getDataCriacao();
+		this.id = topico.getId();
+		this.titulo = topico.getTitulo();
+		this.mensagem = topico.getMensagem();
+		this.dataCriacao = topico.getDataCriacao();
 	}
 	
 	public Long getId() {
