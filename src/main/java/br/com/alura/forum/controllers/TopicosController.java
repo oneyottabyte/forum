@@ -2,6 +2,7 @@ package br.com.alura.forum.controllers;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -58,18 +59,23 @@ public class TopicosController {
 	}
 	
 	@GetMapping("/{id}")
-	public DetalhesTopicoDTO detalhar(@PathVariable Long id) {
-		Topico topico = topicoRepository.getById(id);
-		return new DetalhesTopicoDTO(topico);
+	public ResponseEntity<DetalhesTopicoDTO> detalhar(@PathVariable Long id) {
+		Optional<Topico> topico = topicoRepository.findById(id);		
+		if(topico.isPresent()) {
+			return ResponseEntity.ok(new DetalhesTopicoDTO(topico.get()));
+		}
+		return ResponseEntity.notFound().build();
 	}
 	
 	@PutMapping("/{id}")
 	@Transactional
 	public ResponseEntity<TopicoDTO> atualizar(@PathVariable Long id, @RequestBody @Valid AtualizacaoTopicoForm form) {
-		Topico topico = form.atualizar(id, topicoRepository);
-		
-		
-		return ResponseEntity.ok(new TopicoDTO(topico));
+		Optional<Topico> optional = topicoRepository.findById(id);		
+		if(optional.isPresent()) {
+			Topico topico = form.atualizar(id, topicoRepository);
+			return ResponseEntity.ok(new TopicoDTO(topico));
+		}
+		return ResponseEntity.notFound().build();
 	}
 	
 	@DeleteMapping("/{id}")
