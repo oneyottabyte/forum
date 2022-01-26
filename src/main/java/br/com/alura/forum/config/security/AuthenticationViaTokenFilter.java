@@ -11,17 +11,25 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 public class AuthenticationViaTokenFilter extends OncePerRequestFilter{
 
+	private TokenService tokenService;  
+	
+	public AuthenticationViaTokenFilter(TokenService tokenService) {
+		this.tokenService = tokenService;
+	}
+
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		String token = recuperarToken(request);
+		boolean valid = tokenService.isTokenValid(token);
+		System.out.println(valid);
 		filterChain.doFilter(request, response);		
 	}
 
 	private String recuperarToken(HttpServletRequest request) {
 		String token = request.getHeader("Authorization");
 		if (token == null || token.isEmpty() || !token.startsWith("Bearer ")) {
-			return null;	
+			return null;
 		}
 		return token.substring(7, token.length());
 	}
