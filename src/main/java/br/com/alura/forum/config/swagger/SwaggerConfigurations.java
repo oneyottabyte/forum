@@ -13,7 +13,7 @@ import springfox.documentation.schema.ModelRef;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-@SuppressWarnings("deprecation")
+
 @Configuration
 public class SwaggerConfigurations {
 
