@@ -14,8 +14,9 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 
+@SuppressWarnings("deprecation")
 @Configuration
-public class SwaggerConfigurations {
+public class SwaggerConfigurations{
 
 	@Bean
     public Docket api() {
