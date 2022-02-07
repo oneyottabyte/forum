@@ -15,7 +15,7 @@
 	<name>forum</name>
 	<description>Forum project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 		<openapi.version>1.5.10</openapi.version>
 		<spring-boot-admin.version>2.6.2</spring-boot-admin.version>
 	</properties>
