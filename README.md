@@ -1,7 +1,13 @@
 
 ![Spring Boot-Alura](https://user-images.githubusercontent.com/59287246/153546559-0678f889-47ce-4c5f-aca7-d611d834c583.png)
+<h1 align="center">
+ API REST - Forum (Projeto Backend)
+</h1>
 
-# API REST - Forum (Projeto Backend)
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
 <h1 id="objetivo">
 	<img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-readme-is-a-easy-to-build-a-developer-hub-that-adapts-to-the-user-logo-color-tal-revivo.png"/>
   Descrição
