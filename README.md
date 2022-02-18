@@ -25,7 +25,9 @@ e o acesso ao banco de dados, usando os Repositorys do Spring Boot Data JPA.
 
 <p text-align="justify">Foi utilizado o swagger para criação da documentação automática da API. 
 
-
+```
+java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 forum.jar
+```
 <h1 id="tecnologias-dependencias">
 <img height="30" src="https://img.icons8.com/fluency/50/000000/administrative-tools.png"/>
 	Tecnologias e Dependências
