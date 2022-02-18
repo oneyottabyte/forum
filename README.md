@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
 <h1 id="objetivo">
@@ -17,17 +17,20 @@ Projeto em desenvolvimento, visando a prática com a linguagem Java e os conceit
 Nesse treinamento fiz uma API REST com Spring Boot. O objetivo é construímos com as finalidades para cadastrar, excluir, alterar, detalhar e listar todos os tópicos na nossa aplicação. Fizemos também a parte de validação com Bean Validation, personalizamos as mensagens de erro com o Controller Advice do Spring, 
 e o acesso ao banco de dados, usando os Repositorys do Spring Boot Data JPA.
 
-
 <h1 id="documentacao">
 <img height="30" src="https://img.icons8.com/color/48/000000/documents.png"/>
   Documentação
 </h1>
 
-<p text-align="justify">Foi utilizado o swagger para criação da documentação automática da API. 
+<p text-align="justify">Foi utilizado o swagger para criação da documentação automática da API. A documentação oficial pode ser encontrada abaixo:
+</p>
 
-```
-java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-forum -DFORUM_DATABASE_USERNAME=sa -DFORUM_DATABASE_PASSWORD= -DFORUM_JWT_SECRET=123456 forum.jar
-```
+<a href="https://shrouded-lowlands-41959.herokuapp.com/swagger-ui/index.html">Documentação Oficial</a>
+
+A collection do postman atualizada pode ser importada clicando no botão abaixo:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/03929a6c654963d7fc59?action=collection%2Fimport)
+
 <h1 id="tecnologias-dependencias">
 <img height="30" src="https://img.icons8.com/fluency/50/000000/administrative-tools.png"/>
 	Tecnologias e Dependências
@@ -39,12 +42,11 @@ java -jar -Dspring.profiles.active=prod -DFORUM_DATABASE_URL=jdbc:h2:mem:alura-f
 - Spring boot 2.6.3 - Framework de desenvolvimento
 - Maven- Gerenciador de dependencias
 - H2 Database - Database para o ambiente de testes
-- Postgres - Database para o ambiente de produção
 - Spring Data Jpa - Abstração orm do spring pra integração com o banco de dados
 - Swagger - Documentação oficial da API
 - Postman - Ferramenta para testes nas requisições
 - Lombok - Framework para abstração e melhora na legibilidade do código
-- ModelMapper - Facilitar o mapeamento de objetos e diminuir código boilerplate
+
 
 
 <h1 id="desenvolvedor">
